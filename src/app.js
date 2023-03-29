@@ -14,6 +14,7 @@ const options = {
 */
 const app = express();
 //enable cors
+app.use(cors());
 /*
 app.use(cors(
     {
