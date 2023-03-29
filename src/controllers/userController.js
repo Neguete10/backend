@@ -2,6 +2,12 @@ const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+const test = (_req, res) => {
+  res.status(200).json({ message: "Hello from NodeJS" });
+};
+
+
+
 const createUser = async (req, res) => {
   try {
     console.log(req.body.user);
@@ -139,6 +145,7 @@ const exam = async (req, res) => {
 };
 
 module.exports = {
+  test,
   createUser,
   loginUser,
   userAuth,
